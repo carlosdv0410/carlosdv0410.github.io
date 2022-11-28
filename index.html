@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/icone-calculadora.png  ">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>calculadora</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">calculos básicos</a></li>
+                <li><a href="#">tabuada</a></li>
+                <li><a href="#">radiciação</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section class="corpo1">
+        <div id="sobre">
+            <p>Site feito por Carlos Daniel para aprendizado em JavaScript (Para fins educacionais).</p>
+            <img src="imagens/educacional.png" alt="educacional">
+        </div>
+    </section>
+    <section id="calc">
+        <section id="calculadora">
+            <input type="text" name="res" id="res" value="0" disabled maxlength="12">
+            <table id="display">
+                <tr>
+                    <td><button class="botoes" id="C" onclick="clean()">C</button></td>
+                    <td><button class="botoes" id="apagar" onclick="apaga()"><</button></td>
+                    <td><button class="botoes" id="div" onclick="funcevent('/')">/</button></td>
+                    <td><button class="botoes" id="mult" onclick="funcevent('*')">&times;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botoes" id="sete" onclick="numevent('7')">7</button></td>
+                    <td><button class="botoes" id="oito" onclick="numevent('8')">8</button></td>
+                    <td><button class="botoes" id="nove" onclick="numevent('9')">9</button></td>
+                    <td><button class="botoes" id="sub" onclick="funcevent('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botoes" id="quatro" onclick="numevent('4')">4</button></td>
+                    <td><button class="botoes" id="cinco" onclick="numevent('5')">5</button></td>
+                    <td><button class="botoes" id="seis" onclick="numevent('6')">6</button></td>
+                    <td><button class="botoes" id="soma" onclick="funcevent('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botoes" id="um" onclick="numevent('1')">1</button></td>
+                    <td><button class="botoes" id="dois" onclick="numevent('2')">2</button></td>
+                    <td><button class="botoes" id="tres" onclick="numevent('3')">3</button></td>
+                    <td rowspan="2"><button class="botoes" id="igual" style="height: 110px;" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botoes" id="zero" onclick="numevent('0')">0</button></td>
+                    <td><button class="botoes" id="ponto" onclick="decimal('.')">.</button></td>
+                </tr>
+            </table>
+        </section>
+        <div id="indice">
+            <ul>
+                <li>S = Soma</li>
+                <li>U = Subtração</li>
+                <li>D = Divisão</li>
+                <li>X = Multiplicação</li>
+                <li>P = Ponto</li>
+                <li>C = Limpar display</li>
+                <li>A = Apagar</li>
+                <li>Enter = Igual</li>
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
